@@ -1,0 +1,330 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 12rem;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--cls-primary-pale);
+    
+    @include respond(breakpoint-2){
+        width: 85%;
+    }
+    @include respond(breakpoint-3){
+        background: var(--cls-white);
+        position: relative;
+        width: 100%;
+        height: 10rem;
+        padding: 0 6rem;
+        z-index: 18;
+    }
+    @include respond(breakpoint-4){
+        border-bottom: 2px solid transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    @include respond(breakpoint-5){
+        padding: 0 3rem;
+    }
+    &--logo{
+        width: 17rem;
+
+        @include respond(breakpoint-3){
+            width: 19rem;
+        }
+        @include respond(breakpoint-5){
+            width: 17rem;
+        }
+    }
+    &--tab{
+        display: none;
+        cursor: pointer;
+        @include respond(breakpoint-3){
+            display: block;
+            width: 3rem;
+
+            &:hover{
+                filter: brightness(0) saturate(100%);
+            }
+        }
+        @include respond(breakpoint-5){
+            width: 2.5rem;
+        }
+        
+
+    }
+    &--close{
+        display: none;
+        cursor: pointer;
+        @include respond(breakpoint-3){
+            display: block;
+            width: 2rem;
+            position: absolute;
+            left: 3rem;
+            top: 3rem;
+            &:hover{
+                filter: brightness(0) saturate(100%);
+            }
+        }
+    }
+    &__div--1{
+        display: flex;
+        align-items: center;
+
+        @include respond(breakpoint-3){
+            width: 27rem;
+            justify-content: space-between;
+        }
+        @include respond(breakpoint-5){
+            width: 23rem;
+        }
+        @include respond(breakpoint-6){
+            width: 21.5rem;
+        }
+    }
+    &__div--2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 17rem;
+        position: relative;
+
+        @include respond(breakpoint-1){
+            width: 14rem;
+        }
+        @include respond(breakpoint-5){
+            width: 13rem;
+        }
+        @include respond(breakpoint-6){
+            width: 12rem;
+        }
+    }
+    &__ul{
+        display: flex;
+        margin-left: 5rem;
+        height: 100%;
+
+        @include respond(breakpoint-2){
+            margin-left: 2rem;
+        }
+        @include respond(breakpoint-3){
+            transition: transform .2s;
+            position: absolute;
+            z-index: 20;
+            width: 35rem;
+            height: 100vh;
+            background-color: var(--cls-white);
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            margin-left: 0;
+            padding: 2rem 5rem;
+        }
+    }
+    &__opacity{
+        display: none;
+        position: fixed;
+        height: 0;
+        z-index: 19;
+        transition: opacity .3s;
+        @include respond(breakpoint-3){
+            display: block;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .75);
+            top: 0;
+            left: 0;
+
+        }
+            
+        
+    }
+    &__li{
+        list-style: none;
+        
+    }
+    &__a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 4.5rem;
+        color: rgba(0, 0, 0, .6);
+        font-weight: 400;
+        border-bottom: 4px solid transparent;
+        transition: transform .2s;
+        &:hover{
+            color: var(--cls-black);
+            border-bottom: 4px solid var(--cls-primary);
+
+            @include respond(breakpoint-3){
+                border-bottom: 4px solid transparent;
+                transform: translateX(.5rem);
+            }            
+        }
+        @include respond(breakpoint-2){
+            margin-left: 4rem;
+        }
+        @include respond(breakpoint-3){
+            margin-left: 0;
+            margin-top: 2.5rem;
+            font-weight: 700;
+            color: var(--cls-black);
+            font-size: 2.3rem;
+        }
+        &--1{
+            @include respond(breakpoint-3){
+                margin-top: 8rem;
+            }
+        }
+    }
+    &__dropdown{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 7rem;
+        
+        &--empty{
+            font-weight: 700;
+            color: rgba(0, 0, 0, .6);
+            font-size: 1.7rem;
+            padding: 8rem 0;
+            text-align: center;
+        }
+        &--cart{
+            cursor: pointer;
+            position: relative;
+            @include respond(breakpoint-3){
+                width: 3rem;
+            }
+            &--quantity{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--cls-primary);
+                width: 2rem;
+                height: 1.5rem;
+                position: absolute;
+                transform: translate(50%, -70%);
+                border-radius: 40%;
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--cls-white);
+            }
+        }
+        &--p{
+            font-size: 1.9rem;
+            font-weight: 700;
+            padding: 2.5rem;
+        }
+        
+        &--content{
+            display: none;
+            opacity: 0;
+            flex-direction: column;
+            position: absolute;
+            top: 10rem;
+            right: -8rem;
+            width: 37rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 2rem 3rem rgba(0, 0, 0, .3);
+            background-color: var(--cls-white);
+            z-index: 15;
+            @include respond(breakpoint-2){
+                right: -5rem;
+            }
+            @include respond(breakpoint-3){
+                top: 9rem;
+                right: -3rem;
+            }
+            &--items{
+                max-height: 60vh;
+                overflow-y: auto;
+            }
+            &--title, &--price{
+                color: rgba(0, 0, 0, .6);
+            }
+
+            &--1{
+                border-bottom: 2px solid var(--cls-primary-pale);
+            }
+            &--2{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+            &:hover > &--content{
+                display: flex;
+                opacity: 1;
+            }
+            &:hover > &--cart{
+                filter: brightness(0) saturate(100%);
+            }
+        &--img{
+            width: 100%;
+            border-radius: 5px;
+        }
+        &__checkout{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            &--item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+
+                &__div{
+
+                    &--1{
+                        width: 17%;
+                    }
+                    &--2{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 4.5rem;
+                    }
+                    &--3{
+                        display: flex;
+                        align-items: center;
+                        padding: .5rem;
+                        cursor: pointer;
+                        height: 100%;
+
+                        &:hover > &--icon{
+                            filter: brightness(0) saturate(100%);
+                        }
+                    }
+                }
+            }
+            &--btn{
+                width: 90%;
+                margin: 1rem auto 0 auto;
+                background: var(--cls-primary);
+                color: var(--cls-white);
+                letter-spacing: 1px;
+                padding: 2rem;
+                border-radius: 1.2rem;
+                text-align: center;
+                margin-bottom: 3rem;
+                cursor: pointer;
+
+                &:hover{
+                    background: hsl(26, 100%, 70%);
+                }
+            }
+        }
+       
+    }
+    &--avatar{
+        width: 5.3rem;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        &:hover{
+            border: 2px solid var(--cls-primary);
+        }
+    }
+
+}

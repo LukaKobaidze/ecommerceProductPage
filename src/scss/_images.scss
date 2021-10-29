@@ -1,0 +1,211 @@
+.images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 3.5rem;
+    
+    @include respond(breakpoint-4){
+        display: flex;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+    
+    &__img{
+        width: 100%;
+        
+        &__box{
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+            border-radius: .8rem;
+
+            &:hover{
+                background-color: rgba(255, 255, 255, .45);
+            }
+            &:active{
+                background-color: rgba(255, 255, 255, .7);
+            }
+            &--clicked{
+                background-color: rgba(255, 255, 255, .7);
+                border: 2px solid var(--cls-primary);
+            }
+
+            @include respond(breakpoint-4){
+                display: none;
+            }
+        }
+        &--large{
+            grid-column: 1 / 5;
+            grid-row: 1 / 5;
+            border-radius: 2rem;
+            cursor: pointer;
+
+            &--n{
+
+                @include respond(breakpoint-4){
+                    display: none;
+                }
+            }
+            @include respond(breakpoint-5){
+                border-radius: 0;
+            }
+            
+        }
+        &--small{
+            border-radius: .8rem;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            @include respond(breakpoint-4){
+                display: none;
+            }
+        
+        }
+        &--1, &__box--1{
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+        &--2, &__box--2{
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+        }
+        &--3, &__box--3{
+            grid-column: 3 / 4;
+            grid-row: 5 / 6;
+        }
+        &--4, &__box--4{
+            grid-column: 4 / 5;
+            grid-row: 5 / 6;
+        }
+    }
+    &__popup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+
+        @include respond(breakpoint-4){
+            position: static;
+            height: auto;
+            z-index: 1;
+        }
+        &--opacity{
+            position: relative;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .75);
+            width: 100%;
+            height: 100%;
+            z-index: 21;
+
+            @include respond(breakpoint-4){
+                display: none;
+            }
+        }
+        &--content{
+            width: 55rem;
+            justify-items: center;
+            grid-gap: 0;
+            position: absolute;
+            z-index: 22;
+
+            @include respond(breakpoint-4){
+                position: static;
+                width: auto;
+            }
+            &__close{
+                position: absolute;
+                right: 0;
+                top: -4rem;
+                font-size: 5rem;
+                filter: brightness(100);
+                width: 2.5rem;
+                cursor: pointer;
+
+                &:hover{
+                    filter: invert(64%) sepia(90%) saturate(3415%) hue-rotate(348deg) brightness(102%) contrast(101%);
+                }
+                @include respond(breakpoint-4){
+                    display: none;
+                }
+            }
+            &__div{
+                grid-column: 1 / 5;
+                grid-row: 1 / 5;
+                position: relative;
+            }
+            &__arrow{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 7rem;
+                height: 7rem;
+                background-color: var(--cls-white);
+                border-radius: 50%;
+                z-index: 20;
+                top: 50%;
+                cursor: pointer;
+                user-select: none;
+                
+                &--icon{
+                    width: 1.5rem;
+                    
+                }
+                &:hover > &--icon{
+                    filter: invert(64%) sepia(90%) saturate(3415%) hue-rotate(348deg) brightness(102%) contrast(101%);
+
+                    @include respond(breakpoint-4){
+                        filter: none;
+                    }
+                }
+                &--left{
+                    left: 0;
+                    transform: translate(-50%, -50%);
+
+                    @include respond(breakpoint-4){
+                        transform: translate(2rem, -50%) scale(1.1);
+                    }
+                    @include respond(breakpoint-6){
+                        transform: translate(2rem, -50%) scale(.95);
+
+                    }
+                }
+                &--right{
+                    transform: translate(50%, -50%);
+                    right: 0;
+
+                    @include respond(breakpoint-4){
+                        transform: translate(-2rem, -50%) scale(1.1);
+                    }
+                    @include respond(breakpoint-6){
+                        transform: translate(-2rem, -50%) scale(.95);
+
+                    }
+                }
+            }
+            &--img{
+                &--large{
+                    height: 100%;
+                    width: 100%;
+
+                }
+            }
+            &__box, &--img{
+                width: 75%;
+                height: 75%;
+                margin-top: 3.7rem;
+
+            }
+
+        }
+    }
+}

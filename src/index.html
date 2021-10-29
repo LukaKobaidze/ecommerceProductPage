@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="scss/main.scss">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <script defer src="js/script.js"></script>
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__div--1">
+        <img src="../images/icon-menu.svg" alt="Tab" class="nav--tab">
+        <img src="../images/logo.svg" alt="Logo" class="nav--logo">
+        <div class="nav__opacity"></div>
+        <ul class="nav__ul move-left">
+          <img src="../images/icon-close.svg" alt="close" class="nav--close">
+          <a class="nav__a nav__a--1" href="#">
+            <li class="nav__li">Collections</li>
+          </a>
+          <a class="nav__a" href="#">
+            <li class="nav__li">Men</li>
+          </a>
+          <a class="nav__a" href="#">
+            <li class="nav__li">Women</li>
+          </a>
+          <a class="nav__a" href="#">
+            <li class="nav__li">About</li>
+          </a>
+          <a class="nav__a" href="#">
+            <li class="nav__li">Contact</li>
+          </a>
+        </ul>
+      </div>
+      <div class="nav__div--2">
+        <div class="nav__dropdown">
+          <img src="../images/icon-cart.svg" alt="Cart" class="nav__dropdown--cart">
+          <span class="nav__dropdown--cart--quantity hidden">0</span>
+          <div class="nav__dropdown--content">
+            <div class="nav__dropdown--content--1"><p class="nav__dropdown--p">Cart</p></div>
+            <div class="nav__dropdown--content--2">
+              <div class="nav__dropdown--content--items">
+                <p class="nav__dropdown--empty">Your cart is empty.</p>
+              </div>
+              <div class="nav__dropdown--content--checkout">
+
+              </div>
+            
+            </div>
+          </div>
+
+        </div>
+        <img src="../images/image-avatar.png" alt="Avatar" class="nav--avatar">
+      </div>
+    </nav>
+  </header>
+  <div class="maindiv">
+    <main class="main">
+      <div class="main--1 images images--n">
+        <img class="images__img images__img--large images__img--large--n" src="../images/image-product-1.jpg" alt="Sneaker">
+        <img class="images__img images__img--small images__img--small--n images__img--1" src="../images/image-product-1-thumbnail.jpg" alt="Sneaker">
+        <div class="images__img__box images__img__box--n images__img__box--1"></div>
+        <img class="images__img images__img--small images__img--small--n images__img--2" src="../images/image-product-2-thumbnail.jpg" alt="Sneaker">
+        <div class="images__img__box images__img__box--n images__img__box--2"></div>
+        <img class="images__img images__img--small images__img--small--n images__img--3" src="../images/image-product-3-thumbnail.jpg" alt="Sneaker">
+        <div class="images__img__box images__img__box--n images__img__box--3"></div>
+        <img class="images__img images__img--small images__img--small--n images__img--4" src="../images/image-product-4-thumbnail.jpg" alt="Sneaker">
+        <div class="images__img__box images__img__box--n images__img__box--4"></div>
+        <div class="images__popup hidden--img">
+          <div class="images__popup--opacity"></div>
+          <div class="images__popup--content images">
+            <div class="images__popup--content__div">
+                <img class="images__popup--content__close" src="../images/icon-close.svg" alt="">
+              <div class="images__popup--content__arrow images__popup--content__arrow--left popup__arrow--left">
+                <img class="images__popup--content__arrow--icon" src="../images/icon-previous.svg" alt="">
+              </div>
+              <img class="images__img images__img--large images__popup--content--img--large images__img--large--y" src="../images/image-product-1.jpg" alt="Sneaker">
+              <div class="images__popup--content__arrow images__popup--content__arrow--right popup__arrow--right">
+                <img class="images__popup--content__arrow--icon" src="../images/icon-next.svg" alt="">
+              </div>
+            </div>
+            <img class="images__img images__img--small images__img--small--y images__img--1 images__popup--content--img images__popup--content--img--1" src="../images/image-product-1-thumbnail.jpg" alt="Sneaker">
+            <div data-curslide="1" class="images__img__box images__img__box--y images__img__box--1 images__popup--content__box images__popup--content__box--1"></div>
+            <img class="images__img images__img--small images__img--small--y images__img--2 images__popup--content--img images__popup--content--img--2" src="../images/image-product-2-thumbnail.jpg" alt="Sneaker">
+            <div data-curslide="2" class="images__img__box images__img__box--y images__img__box--2 images__popup--content__box images__popup--content__box--2"></div>
+            <img class="images__img images__img--small images__img--small--y images__img--3 images__popup--content--img images__popup--content--img--3" src="../images/image-product-3-thumbnail.jpg" alt="Sneaker">
+            <div data-curslide="3" class="images__img__box images__img__box--y images__img__box--3 images__popup--content__box images__popup--content__box--3"></div>
+            <img class="images__img images__img--small images__img--small--y images__img--4 images__popup--content--img images__popup--content--img--4" src="../images/image-product-4-thumbnail.jpg" alt="Sneaker">
+            <div data-curslide="4" class="images__img__box images__img__box--y images__img__box--4 images__popup--content__box images__popup--content__box--4"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main--2 about">
+        <span class="about--company-text">SNEAKER COMPANY</span>
+        <h1 class="about--h1">Fall Limited Edition Sneakers</h1>
+        <p class="about--p">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="about__price">
+          <div class="about__price--new">
+            <p class="about__price--new-p">$125.00</p>
+            <span class="about__price--new-span">50%</span>
+          </div>
+          <div class="about__price--old">
+            <p class="about__price--old-p">$250.00</p>
+          </div>
+        </div>
+        <div class="about__quantity">
+          <div class="about__quantity--number">
+            <div class="about__quantity--number-div about__quantity--number-div--1">
+              <img class="about__quantity--number-div--icon" src="../images/icon-minus.svg" alt="minus">
+            </div>
+            <div class="about__quantity--number-div about__quantity--number-div--2">1</div>
+            <div class="about__quantity--number-div about__quantity--number-div--3">
+              <img class="about__quantity--number-div--icon" src="../images/icon-plus.svg" alt="plus">
+            </div>
+          </div>
+          <div class="about__quantity--cart">
+            <img src="../images/icon-cart.svg" alt="Cart" class="about__quantity--cart--icon">
+            <p class="about__quantity--cart--text">Add to cart</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
+
+<!-- Feel free to remove these styles or customise in your own stylesheet 👍
+  <style>
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+</style> -->
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->
+<!-- Collections
+Men
+Women
+About
+Contact
+
+Sneaker Company
+
+Fall Limited Edition Sneakers
+
+These low-profile sneakers are your perfect casual wear companion. Featuring a 
+durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+$125.00
+50%
+$250.00
+
+0
+Add to cart -->

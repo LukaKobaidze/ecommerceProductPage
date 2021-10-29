@@ -1,0 +1,20 @@
+@mixin respond($breakpoint){
+    @if $breakpoint == breakpoint-1 {
+        @media (max-width: 78.125em) { @content }; // 1250px
+    }
+    @if $breakpoint == breakpoint-2 {
+        @media (max-width: 68.75em) { @content }; // 1100px
+    }
+    @if $breakpoint == breakpoint-3 {
+        @media (max-width: 59.375em) { @content }; // 950px
+    }
+    @if $breakpoint == breakpoint-4 {
+        @media (max-width: 50em) { @content }; // 800px
+    }
+    @if $breakpoint == breakpoint-5 {
+        @media (max-width: 31.25em) { @content }; // 500px
+    }
+    @if $breakpoint == breakpoint-6 {
+        @media (max-width: 21.875em) { @content }; // 400px
+    }
+}

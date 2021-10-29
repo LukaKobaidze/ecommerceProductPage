@@ -1,0 +1,146 @@
+@import 'mixins';
+@import 'header';
+@import 'images';
+@import 'about';
+:root{
+    --cls-primary: hsl(26, 100%, 55%);
+    --cls-primary-pale: hsl(25, 100%, 94%);
+    --cls-dark-blue: hsl(220, 13%, 13%);
+    --cls-gray-blue: hsl(220, 14%, 75%);
+    --cls-gray-blue-light: hsl(223, 64%, 98%);
+    --cls-white: hsl(0, 0%, 100%);
+    --cls-black: hsl(0, 0%, 0%);
+
+    --font-main: 'Kumbh Sans', sans-serif;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+
+    @include respond(breakpoint-1){
+        font-size: 60%;
+    }
+    @include respond(breakpoint-2){
+        font-size: 56%;
+    }
+    @include respond(breakpoint-3){
+        font-size: 52%;
+    }
+    @include respond(breakpoint-5){
+        font-size: 48%;
+    }
+    @include respond(breakpoint-6){
+        font-size: 44%;
+    }
+}
+body{
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: var(--font-main);
+}
+.hidden{
+    display: none;
+}
+.hidden--img{
+    display: none;
+
+    @include respond(breakpoint-4){
+        display: flex;
+    }
+}
+
+.bold{
+    color: black;
+    font-weight: 700;
+}
+.maindiv{
+    height: calc(95vh - 12rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include respond(breakpoint-4){
+        height: auto;
+        display: block;
+    }
+}
+.main{
+    display: flex;
+    width: 75%;
+    max-width: 120rem;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @include respond(breakpoint-1){
+        width: 80%;
+    }
+    @include respond(breakpoint-2){
+        width: 85%;
+    }
+    @include respond(breakpoint-3){
+        width: 93%;
+    }
+    @include respond(breakpoint-4){
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 15rem;
+        margin-bottom: 5rem;
+    }
+    @include respond(breakpoint-5){
+        margin-top: 10.5rem;
+    }
+
+    &--1{
+        width: 48%;
+        max-width: 50rem;
+        
+        @include respond(breakpoint-1){
+            width: 42%;
+        }
+        @include respond(breakpoint-3){
+            width: 45%;
+        }
+        @include respond(breakpoint-4){
+            max-width: none;
+            width: 80%;
+        }
+        @include respond(breakpoint-5){
+            width: 100%;
+        }
+        
+    }
+    &--2{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(breakpoint-1){
+            width: 48%;
+        }
+        @include respond(breakpoint-3){
+            width: 48%;
+        }
+        @include respond(breakpoint-4){
+            width: 70%;
+            padding: 2rem;
+        }
+        @include respond(breakpoint-5){
+            width: 100%;
+            padding: 3rem;
+        }
+        
+    }
+}
+
+.move-left{
+    @include respond(breakpoint-3){
+        transform: translateX(-36rem);
+    }
+}
