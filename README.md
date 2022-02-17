@@ -24,10 +24,6 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -43,4 +39,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@LukaaaK](https://www.frontendmentor.io/profile/LukaaaK)
+- Frontend Mentor - [@LukaKobaidze](https://www.frontendmentor.io/profile/LukaKobaidze)
